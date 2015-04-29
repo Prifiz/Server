@@ -29,6 +29,15 @@ public class User {
     //private RSA rsa;
     private static LinkedList<Country> countries = new LinkedList<Country>();
     private static LinkedList<Holiday> holidays = new LinkedList<Holiday>();
+    
+    // давайте сделаем следующим образом
+    /*
+        Создайте дополнительную сущность Календарь которая будет содержать private static ArrayList<Tradition> traditions
+        С методами доступа, само собой (ну либо public, подумайте)
+        В классе User будет ссылка на Календарь. Это более абстрактно и гибко.
+        Плюс это поможет уйти от проблем в классах с операциями добавления, удаления и т.п.
+        См. замечания в соответствующих классах
+    */
     private static ArrayList<Tradition> traditions = new ArrayList<Tradition>();
 
     public User(String login, BigInteger pass, BigInteger key, BigInteger modules, RSA rsa) throws IOException {
